@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imagenes/logo.png" type="image/icon type">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <h1><img src="imagenes/logo.png" alt="Logo de Encriptador Alura" class="logo"></h1>
+        </header>
+
+        <main class="conteiner">
+            <textarea name="text" id="texto" class="texto" cols="35" rows="10" required placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="mensajes" id="mensajes">
+
+                <section class="vacio" id="vacio">
+                    <h1><img src="imagenes/Muñeco.png" alt="Imágen de mensaje no encontrado" id="imagenSinMensaje"></h1>
+                    <h2 id="sinMensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="descpripcionSinMensaje">Ingresa el texto que desea encriptar o desencriptar</p>
+                </section>
+                
+                <section>
+                    <textarea name="text" id="resultado" class="texto" cols="50" rows="12" required></textarea>
+                    <input type="submit" value="Copiar" class="copiar" id="copiar">
+                </section>
+                
+            </div>
+
+            <section class="botones">
+
+                <p><span class="iconify" data-icon="bi:exclamation-circle-fill"></span> Solo letras minúsculas y sin acento</p>
+                <input type="submit" value="Encriptar" class="encriptar" id="encriptar">
+                <input type="submit" value="Desencriptar" class="desencriptar" id="desencriptar">
+
+            </section>
+            
+
+        </main>
+
+        <footer>Realizado por Matías Olveira - Challenge: Encriptador - Pograma Oracle, Next Education</footer>
+
+    </body>
+
+    <script src="acciones.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</html>
