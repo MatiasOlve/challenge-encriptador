@@ -15,7 +15,7 @@ body{
 
 .texto{
     height: 50%;
-    margin: 2% auto;
+    margin: 2% auto 0;
     display: inline-block;
     font-size: 32px;
     color: darkblue;
@@ -64,6 +64,10 @@ textarea:focus{
 .mensajes p{
     margin: 2%;
     font-size: 16px;
+}
+
+#vacio{
+    padding: 30px 20px;
 }
 
 #resultado{
@@ -146,10 +150,18 @@ textarea:focus{
 
 footer{
     text-align: center;
-    margin: 2%;
+    margin: 1%;
     color: darkblue;
 }
 
+a{
+    color: darkblue;
+    text-decoration-line: none;
+}
+
+#github:hover, #linkedin:hover{
+    text-decoration-line: underline;
+}
 
 
 @media screen and (max-width:1024px){
@@ -176,6 +188,7 @@ footer{
         width: 100%;
         float: none;
         display: block;
+        margin: auto;
     }
 
     .vacio{

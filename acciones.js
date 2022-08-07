@@ -27,45 +27,53 @@ function encriptarMensaje(){
     var mensaje = document.querySelector("#texto").value;
     var secreto="";
 
-    for(var i=0;i<mensaje.length;i++){
-        switch(mensaje[i]){
-            case "a":
-                secreto+="ai";
-                break;
-            case "e":
-                secreto+="enter";
-                break;
-            case "i":
-                secreto+="imes";
-                break;
-            case "o":
-                secreto+="ober";
-                break;
-            case "u":
-                secreto+="ufat";
-                break;
-            default:
-                secreto+=mensaje[i];
+    if(mensaje!="" && !/[A-Z]/g.test(mensaje) && !/[á-ú]/g.test(mensaje) && mensaje.trim().length){
+        for(var i=0;i<mensaje.length;i++){
+            switch(mensaje[i]){
+                case "a":
+                    secreto+="ai";
+                    break;
+                case "e":
+                    secreto+="enter";
+                    break;
+                case "i":
+                    secreto+="imes";
+                    break;
+                case "o":
+                    secreto+="ober";
+                    break;
+                case "u":
+                    secreto+="ufat";
+                    break;
+                default:
+                    secreto+=mensaje[i];
+            }
         }
+
+        actualizarPantalla();
+        mostrar(secreto);
+        document.querySelector('#texto').value='';
     }
 
-    actualizarPantalla();
-    mostrar(secreto);
-    document.querySelector('#texto').value='';
+    else alert("Por favor, ingrese un mensaje en minúsculas y sin acentos");
 }
 
 function desencriptarMensaje(){
     var mensaje = document.querySelector("#texto").value;
     var codigos= [/ai/g, /enter/g, /imes/g, /ober/g, /ufat/g];
     var letras = ['a','e','i','o','u'];
+    
+    if(mensaje!="" && !/[A-Z]/g.test(mensaje) && !/[á-ú]/g.test(mensaje) && mensaje.trim().length){
+        for(var i=0;i<5;i++){
+            mensaje=mensaje.replaceAll(codigos[i], letras[i]);
+        }
 
-    for(var i=0;i<5;i++){
-        mensaje=mensaje.replaceAll(codigos[i], letras[i]);
+        actualizarPantalla();
+        mostrar(mensaje);
+        document.querySelector('#texto').value='';
     }
 
-    actualizarPantalla();
-    mostrar(mensaje);
-    document.querySelector('#texto').value='';
+    else alert("Por favor, ingrese un mensaje en minúsculas y sin acentos");
     
 }
 
