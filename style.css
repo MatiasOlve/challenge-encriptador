@@ -1,11 +1,78 @@
+:root{
+    --darkMode: url('https://api.iconify.design/ic/baseline-dark-mode.svg') no-repeat center center / contain;
+    --textAreaColor: darkblue;
+    --colorPlaceholder: darkblue;
+    --backgroundTexto: #E5E5E5;
+    --footerColor: darkblue;
+    --backgroundMensajes: white;
+    --copiarDesencText: darkblue;
+    --copiarDesencBackground: #D8DFE8;
+    --encriptarText: white;
+    --encriptarBackground: darkblue;
+    --borderBoton: darkblue;
+    --borderState: ridge;
+    --hooverColor: hwb(240 28% 45%);
+
+    --logo: url("./Imagenes/Logo.png");
+    
+}
+
+.darkTheme{
+    background-color: #1b1b24;
+    color: white;
+    --darkMode: url('https://api.iconify.design/clarity/sun-line.svg?color=white') no-repeat center center / contain;
+    --textAreaColor: white;
+    --colorPlaceholder: white;
+    --backgroundTexto: #1b1b24;
+    --footerColor: white;
+    --backgroundMensajes: #1b1b24;
+
+    --copiarDesencText: rgb(255, 255, 255);
+    --copiarDesencBackground: hsl(214, 5%, 25%);
+    --encriptarText: white;
+    --encriptarBackground: #3c3c68;
+    --borderState: none;
+    --hooverColor: hsl(240, 47%, 23%);
+    --logo: url("./Imagenes/whiteLogo.png")
+}
+
 body{
     background-color: #E5E5E5;
     font-family: 'inter';
+    transition: 1s;
+}
+
+header :focus{
+    outline-style: none;
 }
 
 .logo{
+    
+    content: var(--logo);
     margin-top: 40px;
     margin-left: 40px;
+
+    /*Elimina el resaltador de texto cuando se hace click en la imagen*/
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.astro{
+    background: var(--darkMode);
+    height: 50px;
+    width: 50px;
+    margin: 20px 80px auto;
+    float: right;
+
+    /*Elimina el resaltador de texto cuando se hace click en la imagen*/
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .conteiner{
@@ -18,10 +85,11 @@ body{
     margin: 2% auto 0;
     display: inline-block;
     font-size: 32px;
-    color: darkblue;
+    color: var(--textAreaColor);
     border: none;
-    background-color: #E5E5E5 ;
+    background-color: var(--backgroundTexto) ;
     resize: none;
+    transition: 1s;
 }
 
 textarea:focus{
@@ -29,13 +97,13 @@ textarea:focus{
 }
 
 ::placeholder{
-    color: darkblue;
+    color: var(--colorPlaceholder);
     opacity: 0.5;
 }
 
 .mensajes{
     float: right;
-    background-color: white;
+    background-color: var(--backgroundMensajes);
     /*display: inline-block;*/
     text-align: center;
     width: 35%;
@@ -46,6 +114,7 @@ textarea:focus{
     box-sizing: border-box;
     border-radius: 32px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
 }
 
 .mensajes img{
@@ -54,6 +123,13 @@ textarea:focus{
 
 #imagenSinMensaje{
     visibility: visible;
+
+    /*Elimina el resaltador de texto cuando se hace click en la imagen*/
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .mensajes h2{
@@ -77,7 +153,7 @@ textarea:focus{
     color: grey;
     text-align: left;
     visibility: visible;
-    background-color: white;
+    background-color: var(--backgroundMensajes);
     display: none;
 }
 
@@ -94,11 +170,13 @@ textarea:focus{
     width: 40%;
     padding: 3% 0;
     font-size: 16px;
-    color: darkblue;
-    background-color: #D8DFE8;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
     border-radius: 15px;
-    border-color: darkblue;
-    transition: 0.5s all;
+    border-width: thin;
+    border-color: var(--borderBoton);
+    transition: 1s all;
     cursor: pointer;
     display: none;
 }
@@ -119,44 +197,45 @@ textarea:focus{
     width: 20%;
     padding: 1% 0;
     font-size: 16px;
-    color: white;
+    color: var(--encriptarText);
     border: none;
-    background-color: darkblue;
+    background-color: var(--encriptarBackground);
     border-radius: 15px;
-    transition: 0.8s all;
+    transition: 1s all;
     cursor: pointer;
 }
 
-.encriptar:hover{
-    background-color: blue;
-}
 
 .desencriptar{
     margin-left: 2%;
     width: 20%;
     padding: 1% 0;
     font-size: 16px;
-    color: darkblue;
-    background-color: #D8DFE8;
-    border-color: darkblue;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-width: thin;
+    border-color: var(--borderBoton);
     border-radius: 15px;
-    transition: 0.8s all;
+    transition: 1s all;
     cursor: pointer;
 }
 
-.desencriptar:hover, .copiar:hover{
-    background-color: #5757a7;
+.encriptar:hover, .desencriptar:hover, .copiar:hover{
+    background-color: var(--hooverColor);
 }
 
 footer{
     text-align: center;
     margin: 1%;
-    color: darkblue;
+    color: var(--footerColor);
+    transition: 1s;
 }
 
 a{
-    color: darkblue;
+    color: var(--footerColor);
     text-decoration-line: none;
+    transition: 1s;
 }
 
 #github:hover, #linkedin:hover{
@@ -168,6 +247,10 @@ a{
 
     .logo{
         margin: 10% auto;
+    }
+
+    .astro{
+        margin: 20px 20px auto;
     }
 
     .texto,.botones{

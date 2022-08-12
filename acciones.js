@@ -86,7 +86,10 @@ function copiarTexto(){
 
 var encriptar = document.querySelector("#encriptar");
 var desencriptar = document.querySelector("#desencriptar");
-var copiar = document.querySelector("#copiar")
+var copiar = document.querySelector("#copiar");
+document.querySelector(".astro").addEventListener("click", function(){
+    document.body.classList.toggle("darkTheme");
+})
 
 copiar.onclick = copiarTexto;
 encriptar.onclick = encriptarMensaje;
