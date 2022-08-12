@@ -1,15 +1,15 @@
 :root{
-    --darkMode: url('https://api.iconify.design/ic/round-dark-mode.svg?color=%231b2430') no-repeat center center / contain;
-    --textAreaColor: darkblue;
+    --darkMode: url('https://api.iconify.design/ic/round-dark-mode.svg?color=%2313265c') no-repeat center center / contain;
+    --textAreaColor: rgb(19,38,92);
     --colorPlaceholder: darkblue;
     --backgroundTexto: #E5E5E5;
-    --footerColor: darkblue;
+    --footerColor: rgb(19,38,92);
     --backgroundMensajes: white;
-    --copiarDesencText: darkblue;
+    --copiarDesencText: rgb(19,38,92);
     --copiarDesencBackground: #D8DFE8;
     --encriptarText: white;
-    --encriptarBackground: darkblue;
-    --borderBoton: darkblue;
+    --encriptarBackground: rgb(19,38,92);
+    --borderBoton: rgb(19,38,92);
     --borderState: ridge;
     --hooverColor: hwb(240 28% 45%);
 
@@ -31,7 +31,7 @@
     --copiarDesencBackground: hsl(214, 5%, 25%);
     --encriptarText: white;
     --encriptarBackground: #3c3c68;
-    --borderState: none;
+    --borderState: hidden;
     --hooverColor: hsl(240, 47%, 23%);
     --logo: url("./Imagenes/whiteLogo.png")
 }
