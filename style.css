@@ -1,5 +1,5 @@
 :root{
-    --darkMode: url('https://api.iconify.design/ic/baseline-dark-mode.svg') no-repeat center center / contain;
+    --darkMode: url('https://api.iconify.design/ic/round-dark-mode.svg?color=%231b2430') no-repeat center center / contain;
     --textAreaColor: darkblue;
     --colorPlaceholder: darkblue;
     --backgroundTexto: #E5E5E5;
@@ -66,6 +66,7 @@ header :focus{
     width: 50px;
     margin: 20px 80px auto;
     float: right;
+    cursor: pointer;
 
     /*Elimina el resaltador de texto cuando se hace click en la imagen*/
     -khtml-user-select: none;
